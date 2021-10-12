@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "946677738843",
+    "project_id": "libery-bcb64",
+    "storage_bucket": "libery-bcb64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946677738843:android:3d229da122c12012b7be7e",
+        "android_client_info": {
+          "package_name": "com.example.libery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946677738843-1q1brvljfp726k2tai17a58h8pcjqjok.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.libery",
+            "certificate_hash": "185c48521e6a9ec22342bc4f83b8091eefa5003e"
+          }
+        },
+        {
+          "client_id": "946677738843-krgdsij6kvrtc2j01o7v01l0jpgnb6mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQyCQKmo8TR_7BHffO-dNNoLehvBrICeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946677738843-krgdsij6kvrtc2j01o7v01l0jpgnb6mg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".CategoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolsBarCat"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/toolbar">
+
+        <ImageView
+            android:id="@+id/backbtnCate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/iconCat"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/logo1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar Categoria"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iconCat"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <!--Categoria-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CategoryLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="225dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:layout_marginTop="40dp"
+            android:id="@+id/EdCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:drawableStart="@drawable/ic_category_gray"
+            android:drawablePadding="10dp"
+            android:hint="Titulo de la categoria"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_gray"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Boton de categoria-->
+    <Button
+        android:id="@+id/BtnEnvioCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Agregar"
+        android:layout_below="@id/CategoryLl"
+        android:textColor="@color/white"
+        app:cornerRadius="18dp"
+        android:backgroundTint="@color/naranja"/>
+
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".PdfAddActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarPdf"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/toolbar01">
+
+        <ImageView
+            android:id="@+id/backbtnPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/iconTVPdf"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/logo1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar nuevo libro"
+            android:textSize="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iconTVPdf"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/ClicBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_attach_white"/>
+
+    </RelativeLayout>
+            <!--Nombre del libro-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TituloTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="240dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/EdTituloPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:drawableStart="@drawable/ic_pdf_gray"
+            android:hint="Nombre del libro"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_gray"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Nombre del libro-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/DesTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/TituloTIL"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/EdDesPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:drawableStart="@drawable/ic_pdf_gray"
+            android:hint="Descrpcion"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_gray"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Elegir Categorias-->
+   <TextView
+       android:id="@+id/EligCat"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/DesTIL"
+       android:layout_marginStart="30dp"
+       android:layout_marginEnd="30dp"
+       android:layout_marginTop="8dp"
+       android:background="@drawable/edittext"
+       android:drawableStart="@drawable/ic_category_gray"
+       android:drawableEnd="@drawable/ic_down_gray"
+       android:drawablePadding="10dp"
+       android:padding="10dp"
+       android:hint="Categoria de libros"
+       android:gravity="center_vertical"
+       android:textColorHint="@color/hint_gray"
+       android:textColor="@color/black"
+       android:textSize="16sp"/>
+
+    <!--Buton Subir PDF-->
+    <Button
+        android:id="@+id/BtnSubePdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EligCat"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Subir PDF"
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>

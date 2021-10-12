@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PdfListAdminActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarPdfList"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/toolbar01">
+
+        <ImageView
+            android:id="@+id/backbtnAdminList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/TvLibros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Libros"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/TvSubti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoria"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/TvLibros"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <!--Buscar-->
+    <EditText
+        android:id="@+id/EdBuscarLibro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarPdfList"
+        android:hint="Buscar"
+        android:drawableStart="@drawable/ic_search_gray"
+        android:drawablePadding="10dp"
+        android:textColorHint="@color/hint_gray"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ViewLibro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/EdBuscarLibro"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/pdf_row_admin"/>
+
+
+        
+
+</RelativeLayout>
