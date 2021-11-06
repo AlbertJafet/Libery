@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Guide.GuiaActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarGuia"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/toolbar01">
+
+        <ImageView
+            android:id="@+id/backbtnGuia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/TvGuia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guia Didactica"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+
+    </RelativeLayout>
+
+    <!--Categorias row-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVcategorias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/toolbarGuia"
+        tools:listitem="@layout/guia_row_user"
+        android:layout_margin="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

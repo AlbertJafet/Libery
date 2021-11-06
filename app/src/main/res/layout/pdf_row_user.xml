@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp"
+    android:background="@color/libros"
+    app:cardCornerRadius="5dp"
+    android:elevation="0dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/RlGnral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/librosradius">
+
+        <RelativeLayout
+            android:id="@+id/PdfRl"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/grisCate">
+
+            <!--PDF VIEW-->
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/PdfView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <!--Barra-->
+            <ProgressBar
+                android:id="@+id/ProgreBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/TxtTituloPdf"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titulo Libro"
+            android:layout_toEndOf="@id/PdfRl"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/TxtDescPdf"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripcion"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/PdfRl"
+            android:layout_below="@id/TxtTituloPdf"
+            android:maxLines="4"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/TxtCatPdf"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoria"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/TxtSizePdf"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size"
+            android:layout_toEndOf="@id/PdfRl"
+            android:layout_alignParentBottom="true"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/TxtFechaPdf"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dd/mm/yyyy"
+            android:layout_toEndOf="@id/TxtSizePdf"
+            android:textAlignment="center"
+            android:layout_toStartOf="@id/TxtCatPdf"
+            android:layout_alignParentBottom="true"
+            android:maxLines="1"/>
+
+        <!--Leer-->
+       <Button
+           android:id="@+id/BtnLeer"
+           android:layout_width="210dp"
+           android:layout_height="40dp"
+           android:layout_below="@id/TxtDescPdf"
+           android:layout_centerHorizontal="true"
+           android:text="L e e r"
+           android:layout_toEndOf="@id/PdfRl"
+           android:layout_marginEnd="8dp"
+           android:layout_marginTop="8dp"
+           android:backgroundTint="@color/leer"/>
+
+        <!--Descargar-->
+        <Button
+            android:id="@+id/BtnDescargar"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/TxtDescPdf"
+            android:layout_centerHorizontal="true"
+            android:drawableBottom="@drawable/ic_download_white"
+            android:layout_toEndOf="@id/BtnLeer"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/leer"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
